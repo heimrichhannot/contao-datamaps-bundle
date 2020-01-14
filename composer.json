@@ -1,0 +1,19 @@
+{
+  "name": "heimrichhannot/contao-datamaps-bundle",
+  "type": "contao-bundle",
+  "description": "Contao port of http://datamaps.github.io that creates customizable SVG map visualizations for the web in a single Javascript file using D3.js",
+  "license": "LGPL-3.0-or-later",
+  "require": {
+    "php": "^7.1",
+    "contao/core-bundle": "^4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "HeimrichHannot\\DatamapsBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "HeimrichHannot\\DatamapsBundle\\ContaoManager\\Plugin",
+    "foxy": true
+  }
+}
