@@ -1,0 +1,11 @@
+{
+  "name": "contao-datamaps-bundle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:heimrichhannot/contao-datamaps-bundle.git",
+  "author": "Thomas Körner <t.koerner@heimrich-hannot.de>",
+  "license": "LGPL-3.0-or-later",
+  "dependencies": {
+    "datamaps": "^0.4"
+  }
+}

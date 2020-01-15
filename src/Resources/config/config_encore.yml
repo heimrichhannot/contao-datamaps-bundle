@@ -1,0 +1,3 @@
+huh_encore:
+  js_entries:
+    - { name: "contao-datamaps-bundle", requires_css: true, file: 'vendor/heimrichhannot/contao-datamaps-bundle/src/Resources/assets/js/contao-datamaps-bundle.js' }

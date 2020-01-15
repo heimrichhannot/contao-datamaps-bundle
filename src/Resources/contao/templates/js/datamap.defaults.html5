@@ -1,0 +1,7 @@
+var datamap,
+	cssID = '<?= $this->cssID; ?>',
+	config = {<?= $this->config; ?>},
+	states = JSON.parse('<?= $this->states; ?>'),
+	bubbles = JSON.parse('<?= $this->bubbles; ?>');
+
+<?php include TL_ROOT . '/system/modules/datamaps/assets/js/' . $this->getName() . '.js'; ?>

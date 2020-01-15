@@ -1,0 +1,43 @@
+geographyConfig: {
+	dataUrl: 'system/modules/datamaps/assets/mapdata/custom/de/de-federal-states.json',
+	highlightOnHover: <?= $this->highlightOnHover; ?>,
+	highlightFillColor : '<?= $this->highlightFillColor ?: 'rgb(252,141,89)'; ?>',
+	highlightBorderColor : '<?= $this->highlightBorderColor ?: 'rgba(250, 15, 160, 0.2)'; ?>',
+	highlightBorderWidth : <?= $this->highlightBorderWidth ?: 2; ?>,
+	popupOnHover: <?= $this->popupOnHover; ?>
+},
+setProjection: function(element, options) {
+	var projection = d3.geo.mercator()
+					 .center([10.45, 51.3])
+					 .rotate([0, 0])
+					 .scale(element.offsetWidth * 6)
+                     .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+
+	var path = d3.geo.path().projection(projection);
+
+	return {path: path, projection: projection};
+},
+scope: 'de-federal-states',
+width: null, //if not null, datamaps will grab the width of 'element',
+height: null, //if not null, datamaps will grab the height of 'element'
+responsive: true, //if true, call `resize()` on the map object when it should adjust it's size
+aspectRatio: .88,
+done: function() {}, //callback when the map is done drawing
+bubblesConfig: {
+	fillColor: 'white',
+	fillOpacity: 1,
+	highlightOnHover: true,
+	highlightFillColor: '#FC8D59',
+	highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
+	highlightBorderWidth: 2,
+	highlightFillOpacity: 0.85,
+	popupTemplate: function(geography, data) {
+		return '<div class="hoverinfo"><strong>' + data.title + '</strong></div>';
+	}
+},
+arcConfig: {
+	strokeColor: '#DD1C77',
+	strokeWidth: 1,
+	arcSharpness: 1,
+	animationSpeed: 600
+},<?php echo $this->config; ?>
